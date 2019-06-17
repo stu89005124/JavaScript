@@ -1,0 +1,16 @@
+<script>
+    function test() {
+        let year = parseInt(document.getElementById("year").value);
+        if(year % 400 == 0){
+            document.write("此為閏年")
+        } else if(year % 100 == 0){
+            document.write("此年不是閏年")
+        } else if (year % 4 == 0){
+            document.write("此為閏年")
+        }else {
+            document.write("此年不是閏年")
+        }
+    }
+</script>
+<input type="number" id="year">
+<input type="button" value="送出" onclick="test()">
