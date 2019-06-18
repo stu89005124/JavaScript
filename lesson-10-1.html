@@ -1,0 +1,21 @@
+<script>
+    let porker = [];
+    let rand;
+    let bRepeat;
+    for (let i = 0; i < 52;i++){
+        do {
+            rand = parseInt(Math.random() * 52);
+            bRepeat = false;
+            for(let j = 0;j < i;j++){
+                if (porker[j] == rand){
+                    bRepeat = true;
+                    break;
+                }
+            }
+        } while (bRepeat);
+        porker[i] = rand;
+    }
+    for (let i in porker){
+        document.write(porker[i] + "<br>");
+    }
+</script>

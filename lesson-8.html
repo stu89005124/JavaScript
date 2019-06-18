@@ -1,0 +1,18 @@
+<table border="1" width="100%">
+    <script>
+
+    for(k = 0;k < 2;k++){    
+        document.write("<tr>");
+        for (let i = 2; i < 6; i++) {
+            let newi = i + k * 4;
+            document.write("<td bgcolor='" + ((newi + k) % 2 == 0 ? "pink" : "yellow") + "'>");
+            for (let j = 1; j < 10; j++) {
+                let r = newi * j;
+                document.write(newi + "*" + j + "=" + r + "<br>");
+            }
+            document.write("</td>");
+        }
+        document.write("</tr>");
+    }
+    </script>
+</table>

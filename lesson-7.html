@@ -1,0 +1,15 @@
+<script>
+    function myinit(){
+        document.write("init");
+    }
+    function drawline(){
+        document.write("<hr>");
+    }
+    
+    let i = 0
+    for ( myinit(); i < 10; drawline() ){
+        document.write(i++ + "<br>");
+    }
+    document.write("<hr>");
+    document.write(i);
+</script>

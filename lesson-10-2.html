@@ -1,0 +1,25 @@
+<script>
+    let porker = [];
+    let rand;
+    for (let i = 0; i < 51;i++){
+        porker[i] = i;
+    }
+    for(let i = porker.length-1;i>0;i--){
+        rand = parseInt(Math.random() * (i + 1));
+        let value = porker[rand];
+        porker[rand] = porker[i]; 
+        porker[i] = value;
+    }
+    for (let i in porker){
+        document.write(porker[i] + "<br>");
+    }
+    document.write("<hr>");
+
+    let players = [[],[],[],[]];
+    for (let i=0; i<porker.length;i++){
+        players[i%4][parseInt(i/4)] = porker[i];
+    }
+    players.forEach(element => {    
+        document.write(players[element] + "<br>");
+    });
+</script>
