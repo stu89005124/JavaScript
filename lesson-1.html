@@ -1,19 +1,34 @@
 <script>
     function myFunction() {
+      let op = document.getElementById("op");
+      let opVal = op.selectedIndex;
+
       let x =　document.getElementById("x").value;
       let y = document.getElementById("y").value;
       let result = document.getElementById("result");
       x = parseInt(x);
       y = parseInt(y);
-      let z = x + y;
-      let z1 = parseInt(x / y);
-      let z2 = parseInt(x % y);
+      switch(opVal){
+          case 0:
+            let z1 = parseInt(x + y);
+            break;
+          case 1:
+            let z1 = parseInt(x - y);
+            break
+          case 2:
+            let z1 = parseInt(x * y);
+            break
+          case 3:
+            let z1 = parseInt(x / y);
+            let z2 = parseInt(x % y);
+            break
+      }
       result.innerHTML = z1 + '...' + z2;
     }
 </script>
 
 <input type="number" id="x">
-<select>
+<select id="op">
     <option>+</option>
     <option>-</option>
     <option>*</option>

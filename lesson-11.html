@@ -1,0 +1,12 @@
+<script>
+    function calSum(){
+        let n = document.getElementById("n");
+        let i = 1;
+        while (i <= n) sum += i++;
+        document.write(sum);
+        document.getElementById("result").innerHTML(sum);
+    }
+</script>
+<input type="number" id="n">
+<input type="button" value="=" onclick="calSum()">
+<span id="result">1+2+3+.....+n</span>

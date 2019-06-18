@@ -1,0 +1,18 @@
+<script>
+    function sayyaV2(...Names){
+        for(let Name of Names){
+            document.write(`YA! ${Name}<br>`)
+        }
+    }
+
+    sayyaV2();
+    sayyaV2('A');
+    sayyaV2('A','B','C');
+
+    let f1 = function(x, y){
+        return 2*x + y;
+    }
+    
+    let v1 = f1(2,3);
+    document.write(v1);
+</script>

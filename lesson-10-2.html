@@ -1,7 +1,7 @@
 <script>
     let porker = [];
     let rand;
-    for (let i = 0; i < 51;i++){
+    for (let i = 0; i < 52;i++){
         porker[i] = i;
     }
     for(let i = porker.length-1;i>0;i--){
@@ -11,7 +11,7 @@
         porker[i] = value;
     }
     for (let i in porker){
-        document.write(porker[i] + "<br>");
+        document.write(porker[i] + ",");
     }
     document.write("<hr>");
 
@@ -19,7 +19,23 @@
     for (let i=0; i<porker.length;i++){
         players[i%4][parseInt(i/4)] = porker[i];
     }
-    players.forEach(element => {    
-        document.write(players[element] + "<br>");
-    });
 </script>
+<table width="100%" border="1" style="border-collapse: collapse">
+    <script>
+        let suits = ['&spades;','&hearts;','&diams;','&clubs;'];
+        let numbers = ['A',2,3,4,5,6,7,8,9,10,'J','Q','K'];
+        for (let player of players){
+            document.write("<tr>");
+            for(let card of player){
+                if(parseInt(card/13)==1 || parseInt(card/13)==2){
+                    document.write("<td style='color:red'>");
+                } else {
+                    document.write("<td style='color:black'>");
+                }
+                document.write(suits[parseInt(card/13)] + numbers[parseInt(card%13)]);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+    </script>
+</table>
