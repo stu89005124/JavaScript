@@ -1,0 +1,31 @@
+<script src="homework2.js"></script>
+<script>
+    function ckId() {
+        let gender = document.getElementsByName("gender");
+        for (let i = 0; i < gender.length; i++) {
+            if (gender[i].checked){
+                sex = gender[i].value;
+            }
+        }
+        let bOK;
+        let id;
+        do{
+            id = createID(sex);
+            bOK = checkTWId(id);
+        }while(bOK != true);
+        document.getElementById("newid").innerHTML = id;
+    }
+</script>
+<h2>身份證字號產生器</h2>
+<input type="radio" name="gender" value="1">男性
+<input type="radio" name="gender" value="2">女性
+<!-- <select id="need">
+    <option value=""></option>
+    <option value="A">台北</option>
+    <option value="O">新竹</option>
+</select> -->
+<br>
+<br>
+<input type="button" onclick="ckId()" value="submit">
+
+<h3 id="newid"></h3>

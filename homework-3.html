@@ -1,0 +1,153 @@
+<script src="homework3.js"></script>
+<div class="box">
+    <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td id='1' class="borderBlack"><span class="fake">1</span></td>
+            <td id='2' class="borderBlack"><span class="fake">2</span></td>
+            <td id='3' class="borderBlack"><span class="fake">3</span></td>
+            <td id='4' class="borderBlack"><span class="fake">4</span></td>
+            <td id='5' class="borderBlack"><span class="fake">5</span></td>
+            <td id='6' class="borderBlack"><span class="fake">1</span></td>
+            <td id='7' class="borderBlack"><span class="fake">2</span></td>
+            <td id='8' class="borderBlack"><span class="fake">1</span></td>
+        </tr>
+        <tr>
+            <td id='28' class="borderBlack"><span class="fake">2</span></td>
+            <td colspan="6" rowspan="6" id="log">123456
+            </td>
+            <td id='9' class="borderBlack"><span class="fake">3</span></td>
+        </tr>
+        <tr>
+            <td id='27' class="borderBlack"><span class="fake">4</span></td>
+            <td id='10' class="borderBlack"> <span class="fake">5</span></td>
+        </tr>
+        <tr>
+            <td id='26' class="borderBlack"> <span class="fake">6</span></td>
+            <td id='11' class="borderBlack"><span class="fake">1</span></td>
+        </tr>
+        <tr>
+            <td id='25' class="borderBlack"><span class="fake">2</span></td>
+            <td id='12' class="borderBlack"><span class="fake">1</span></td>
+        </tr>
+        <tr>
+            <td id='24' class="borderBlack"><span class="fake">3</span></td>
+            <td id='13' class="borderBlack"><span class="fake">4</span></td>
+        </tr>
+        <tr>
+            <td id='23' class="borderBlack"><span class="fake">5</span></td>
+            <td id='14' class="borderBlack"><span class="fake">3</span></td>
+        </tr>
+        <tr>
+            <td id='22' class="borderBlack"><span class="fake">2</span></td>
+            <td id='21' class="borderBlack"><span class="fake">3</span></td>
+            <td id='20' class="borderBlack"><span class="fake">4</span></td>
+            <td id='19' class="borderBlack"><span class="fake">1</span></td>
+            <td id='18' class="borderBlack"><span class="fake">3</span></td>
+            <td id='17' class="borderBlack"><span class="fake">5</span></td>
+            <td id='16' class="borderBlack"><span class="fake">2</span></td>
+            <td id='15' class="borderBlack"><span class="fake">6</span></td>
+        </tr>
+    </table>
+    <br>
+    <div class="center">
+        <input type="button" value="開始" onclick="startgame()">
+        <input type="button" value="重置" onclick="restart()">
+    </div>
+    <ul>
+        <li>
+            <p><input type="text" id="one" value="0" class="num" /></p>
+            <p><input type="button" id="" value="+" class="sBtn" />
+                <input type="button" id="" value="-" class="sBtn" />
+            </p>
+        </li>
+        <li>
+            <p><input type="text" id="two" value="0" class="num" /></p>
+            <p><input type="button" id="" value="+" class="sBtn" /><input type="button" id="" value="-" class="sBtn" />
+            </p>
+        </li>
+        <li>
+            <p><input type="text" id="three" value="0" class="num" /></p>
+            <p><input type="button" id="" value="+" class="sBtn" /><input type="button" id="" value="-" class="sBtn" />
+            </p>
+        </li>
+        <li>
+            <p><input type="text" id="four" value="0" class="num" /></p>
+            <p><input type="button" id="" value="+" class="sBtn" /><input type="button" id="" value="-" class="sBtn" />
+            </p>
+        </li>
+        <li>
+            <p><input type="text" id="five" value="0" class="num" /></p>
+            <p><input type="button" id="" value="+" class="sBtn" /><input type="button" id="" value="-" class="sBtn" />
+            </p>
+        </li>
+        <li>
+            <p><input type="text" id="six" value="0" class="num" /></p>
+            <p><input type="button" id="" value="+" class="sBtn" /><input type="button" id="" value="-" class="sBtn" />
+            </p>
+        </li>
+    </ul>
+    <div>餘額: <span id="balance">500</span></div>
+</div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 540px;
+        height: 600px;
+        margin: 0 auto;
+        border: 2px black solid;
+    }
+
+    .fake {
+        display: block;
+        background-color: #365;
+        font-size: 30px;
+        color: red;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+
+    table {
+        border: 3px #777777 solid;
+        margin: 0 auto;
+    }
+
+    .borderBlack {
+        border: 2px black solid;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    input {
+        font-size: 15px;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        float: left;
+    }
+
+    .num {
+        width: 30px;
+    }
+
+    .sBtn {
+        width: 15px;
+    }
+
+    #log {
+        color: red;
+        text-align: center;
+    }
+</style>
