@@ -1,0 +1,14 @@
+<script>
+    let obj = {
+        name: 'Brad',
+        age: 18
+    }
+
+    function cloneValue(obj){
+        let objnew = new Object();
+        for (let attr in obj){
+            objnew[attr] = obj[attr];
+        }
+        return objnew;
+    }
+</script>

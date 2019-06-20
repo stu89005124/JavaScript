@@ -1,0 +1,13 @@
+<select name="textAlign" id="textAlign" onchange="chAlign()">
+    <option value="">default</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
+    <option value="center">center</option>
+</select>
+<div id='mytext' style='text-Align: center'>Hello,World</div>
+<script>
+    function chAlign(){
+        // 可以直接使用標籤裡面的ID 不用再另行宣告
+        mytext.style[textAlign.name] = textAlign.value;
+    }
+</script>

@@ -1,0 +1,21 @@
+<script>
+    // 宣告物件
+    let a1 = [];
+    a1['name'] = 'Brad';
+    a1['age'] = 18;
+    // 物件內也能宣告Function
+    a1['eat'] = function(){
+        document.write(this.name + " eat food.<hr>");
+    }
+    a1.eat();
+
+    function test1(){
+        let aa= 123;
+        let bb= '123';
+        let cc= 12.3;
+        return [aa,bb,cc];
+    }
+    // 一次接收多筆資料
+    let [x,y,z] = test1();
+    document.write(x + ":"+ y + ":"+ z);
+</script>

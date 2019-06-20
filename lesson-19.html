@@ -1,0 +1,47 @@
+<script>
+    // 創建HTML的BODY;
+    let body = document.createElement('body');
+    document.body = body;
+    // 建立h1標籤
+    let head = document.createElement('h1');
+
+    // 創建一變數 帶入文字內容
+    let h1text = document.createTextNode('Hello World');
+    //將此文字內容加入變數head
+    head.appendChild(h1text);
+    //再加入body
+    document.body.appendChild(head);
+    h1text.textContent = "Hell, Brad";
+
+    let hr = document.createElement('hr');
+    document.body.appendChild(hr);
+    
+    let ul = document.createElement('ul');
+    body.appendChild(ul);
+
+    let li1 = document.createElement('li');
+    li1.innerHTML = "111111";
+    // 再父元素加上子元素
+    ul.appendChild(li1);
+
+    
+    for(let i=0;i<3;i++){
+        let li = document.createElement('li');
+        li.innerHTML = `第${i+1} 個項目內容資料`;
+        ul.appendChild(li);
+    }
+
+    // clonenode 可帶入true(深拷貝) false(預設/不帶入)
+    let hr2 = hr.cloneNode();
+    body.appendChild(hr2);
+
+    let ul2 = ul.cloneNode();
+    body.appendChild(ul2);
+    for(let i=0;i<3;i++){
+        let li = document.createElement('li');
+        li.innerHTML = `第${i+1} 個項目內容資料`;
+        ul2.appendChild(li);
+    }
+
+    
+</script>
