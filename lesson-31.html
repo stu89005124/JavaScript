@@ -1,0 +1,14 @@
+<span id="now"></span>
+<script>
+    Date.prototype.getCWeek = function(){
+        let w = this.getDay();
+        let ws = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        return ws[w];
+    }
+    function shownow(){
+        let d1 = new Date();
+        let data = "民國:" + parseInt(d1.getFullYear()-1911);
+        now.innerHTML = `${data}年,${d1.getCWeek()}`;
+    }
+    setInterval(shownow ,100);
+</script>

@@ -1,0 +1,11 @@
+<script>
+    //建構子
+    let bike = function(){
+        console.log("new a bike");
+        this.a = 12;
+        this.b = 34;
+    }
+    let b1 = new bike();
+    bike.prototype.x = 111;
+    console.log(b1.x);
+</script>

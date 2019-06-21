@@ -1,0 +1,55 @@
+<script>
+    class Bike {
+        constructor(speed) {
+            console.log("new bike");
+            this.speed = speed;
+            this.name = '';
+        }
+        upSpeed() {
+            this.speed += 1.2;
+        }
+        // 靜態方法 跟 物件本身無關 也不能用this及跟物件有關的邏輯
+        static m1(){
+        console.log("Nice");
+        }
+    }
+    class Scooter extends Bike {
+        constructor(speed, gear) {
+            //呼叫父層建構子
+            super();
+            console.log("new Scooter");
+            this.speed = speed;
+            this.gerar = gear;
+        }
+        setGear() {
+            this.gerar = gear;
+        }
+        upSpeed() {
+            this.speed = this.speed * (this.gear + 1.2);
+        }
+    }
+
+    class Brad {
+        constructor(){
+            console.log("ok");
+        }
+    };
+    let b1 = new Bike(12);
+    console.log(b1.speed);
+    console.log(b1.name);
+
+    let s1 = new Scooter(12);
+    console.log(s1.speed);
+    console.log(s1.name);
+
+    console.log(b1 instanceof Bike);
+    console.log(s1 instanceof Bike);
+    console.log(s1 instanceof Scooter);
+
+    let brad1 = new Brad();
+    let brad2 = new Brad(1, 2);
+    let brad3 = new Brad(1, 2, 3);
+
+    Bike.m1();
+    Scooter.m1();
+</script>

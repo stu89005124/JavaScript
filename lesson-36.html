@@ -1,0 +1,33 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<h1 id="test1">Brad Big Company</h1>
+<div id="consatiner">
+    <h1>I am h1</h1>
+    <p>p1</p>
+    <hr>
+    <h1>I am h2</h1>
+    <p>p2</p>
+</div>
+<hr>
+<input type="button" id="go" value="go">
+<input type="text" class="inputtext">
+<input type="text" class="inputtext">
+<input type="text" class="inputtext">
+<script>
+    $('#test1').click(function(){
+        $('#test1').css('color','red').css('background-color','green');
+        let ps = $('p');
+        for(let p of ps){
+            p.style.color = 'blue';
+            p.style.backgroundColor = 'yellow';
+        }
+
+        $jObj = $(document.getElementById('consatiner'));
+        $jObj.css('background-color','pink')
+    });
+
+    $('#go').click(function(){
+        $('.inputtext').val('Hello world');
+    })
+    //bradchao 老師github
+</script>

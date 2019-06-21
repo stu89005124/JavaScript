@@ -1,0 +1,35 @@
+<script>
+    let bike = {
+        a: 11,
+        b: 12,
+        m1: function(){
+            console.log("bike:m1()" + this.a);
+        }
+    }
+    let person = {
+        name: '',
+        mybike: Object.create(bike)
+    }
+    //建構子
+    let b1 = Object.create(bike);
+    for(key in b1){
+        console.log(key + b1[key]);
+    }
+
+    // new Object因bike裡沒有建構式所以是空的
+    let b2 = bike.constructor();
+    for(key in b2){
+        console.log(key + b2[key]);
+    }
+
+    let p1 = Object.assign({},person);
+    p1.name = "Brad";
+    p1.mybike.a = 33;
+    console.log(p1.name + ":" + p1.mybike.a);
+    
+    let p2 = Object.assign({},person);
+    p2.name = "Kevin";
+    p2.mybike.a = 44;
+    console.log(p1.name + ":" + p1.mybike.a);
+    console.log(p2.name + ":" + p2.mybike.a);
+</script>

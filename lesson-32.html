@@ -1,0 +1,32 @@
+<script>
+    let person = {
+        name:'Brad',
+        age: 18,
+        weight: 100,
+        bike: [
+            {
+                name: 'bb',
+                speed: 10
+            },
+            {
+                name: 'yy',
+                speed: 20
+            }
+        ],
+        eat: function(){
+            console.log("eat");
+        }
+    }
+    let strperson = JSON.stringify(person);
+    console.log(strperson);
+    
+    let person2 = JSON.parse(strperson);
+    console.log(person2);
+
+    console.log(person2.name);
+    console.log(person2.bike[1].name);
+    person2.name = 'Eric';
+    person2.bike[1].speed = 200;
+    console.log(person2.name);
+    console.log(person2.bike[1].speed);
+</script>

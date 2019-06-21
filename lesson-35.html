@@ -1,0 +1,19 @@
+<script src="bradapi.js"></script>
+<script>
+    function gotoBackend(){
+        let account = account.value;
+        let id = twid.value;
+        let pwd1 = pwd1.value;
+        let pwd2 = pwd2.value;
+        let regex = /^[a-zA-Z0-9]{8}$/;
+        consol.log(pwd1.match(regex));
+    }
+</script>
+<form id="myform" onsubmit="return gotoBackend()">
+    *Account: <input type="text" id="account"><br>
+    *ID: <input type="text" id="twid"><br>
+    *Password1: <input type="password" id="pwd1"><br>
+    *Password2: <input type="password" id="pwd2"><br>
+    Memo: <textarea id="memo"></textarea>
+    <input type="submit" value="register">
+</form>
