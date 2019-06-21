@@ -3,6 +3,7 @@ let id = 1;
 let starting = false;
 let win;
 var bettotal = parseInt(0);
+let delay = 3000, i = 1;
 function startgame() {
     let Total = parseInt(document.getElementById('balance').textContent);
     if (starting) {
@@ -57,6 +58,24 @@ function doThing() {
         behind.style.borderColor = '';
     }
     first.style.borderColor = 'yellow';
+}
+
+function addspeed() {
+    console.log(i++);
+    if (delay <= 10) {
+        doThing2();
+        return;
+    }
+    setTimeout(doThing, delay);
+    delay -= delay / 5;
+}
+function slowspeed() {
+    console.log(i--);
+    if (delay >= 3000) {
+        return;
+    }
+    setTimeout(doThing2, delay);
+    delay *= 1.5;
 }
 function restart() {
     let doublecheck = confirm('確定要重置嗎');
